@@ -76,7 +76,7 @@ img {
   }
   
   #playPauseBtn {
-    background-color: cyan; /* Solid color */
+    background-color: red; /* Solid color */
     color: white;
     border: none;
     padding: 10px 20px;
