@@ -33,8 +33,5 @@ function playPauseAudio() {
 
 // Attach both 'click' and 'touchstart' events for better mobile compatibility
 playPauseBtn.addEventListener('click', playPauseAudio);
-playPauseBtn.addEventListener('touchstart', function(e) {
-  e.preventDefault(); // Prevent default touch behavior
-  playPauseAudio();
-});
+playPauseBtn.addEventListener('touchstart', playPauseAudio);
 
