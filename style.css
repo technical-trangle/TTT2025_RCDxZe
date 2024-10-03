@@ -85,7 +85,21 @@ img {
     border-radius: 5px;
   }
   
-  #playPauseBtn:hover {
+  /* #playPauseBtn:hover {
     background-color: magenta;
+  } */
+  
+  /* Apply hover effect only on desktop devices */
+@media (min-width: 768px) {
+    #playPauseBtn:hover {
+      background-color: #45a049;
+    }
   }
   
+  /* No hover effect for mobile */
+  @media (max-width: 768px) {
+    #playPauseBtn {
+      /* Ensure button is consistent for mobile (no hover effect) */
+      transition: none;
+    }
+  }
