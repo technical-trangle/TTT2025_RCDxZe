@@ -76,23 +76,28 @@ img {
   }
   
   #playPauseBtn {
-    background-color: red; /* Solid color */
-    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: white; /* Solid color */
+    color: magenta;
     border: none;
+    outline: 2px;
+    outline-color: magenta;
+    outline-style: solid;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0px;
+    filter: contrast(10000);
   }
   
-  /* #playPauseBtn:hover {
-    background-color: magenta;
-  } */
   
   /* Apply hover effect only on desktop devices */
 @media (min-width: 768px) {
     #playPauseBtn:hover {
-      background-color: #45a049;
+      background-color: lime;
+      color: white;
+      outline: none;
     }
   }
   
@@ -101,5 +106,6 @@ img {
     #playPauseBtn {
       /* Ensure button is consistent for mobile (no hover effect) */
       transition: none;
+      color: magenta
     }
   }
