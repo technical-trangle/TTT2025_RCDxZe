@@ -76,7 +76,7 @@ img {
   }
   
   #playPauseBtn {
-    background-color: magenta; /* Solid color */
+    background-color: cyan; /* Solid color */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -87,5 +87,5 @@ img {
   }
   
   #playPauseBtn:hover {
-    background-color: #45a049;
+    background-color: magenta;
   }
