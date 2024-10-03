@@ -11,6 +11,7 @@
 //   }
 // });
 
+// SECOND TROUBLE SHOOT
 const audio = document.getElementById('audioPlayer');
 const playPauseBtn = document.getElementById('playPauseBtn');
 
@@ -19,6 +20,7 @@ function playPauseAudio() {
   if (audio.paused) {
     audio.play()
       .then(() => {
+        audio.muted = false; // Unmute the audio
         playPauseBtn.textContent = 'Pause';
       })
       .catch(error => {
@@ -34,4 +36,3 @@ function playPauseAudio() {
 // Attach both 'click' and 'touchstart' events for better mobile compatibility
 playPauseBtn.addEventListener('click', playPauseAudio);
 playPauseBtn.addEventListener('touchstart', playPauseAudio);
-
