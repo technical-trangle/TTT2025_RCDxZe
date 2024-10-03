@@ -10,3 +10,7 @@ playPauseBtn.addEventListener('click', function () {
     playPauseBtn.textContent = 'Play';
   }
 });
+
+
+
+

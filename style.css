@@ -51,8 +51,11 @@ img {
     font-size: 14px;
     cursor: pointer;
     border-radius: 0px;
-    border-width: 1px;
-
+    border: none;
+    outline: 2px;
+    outline-color: black;
+    outline-style: solid;
+    filter: contrast(10000);
   }
   
   #playPauseBtn:hover {
