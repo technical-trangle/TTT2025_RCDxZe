@@ -9,16 +9,33 @@ html, body {
 }   
 
 img { 
+    position: relative;
+    /* position: absolute; */
     padding:0;
     margin:0;
 }
  
 .image {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 0;
 }
+
+.img1 {
+    filter: blur(2px) brightness(1.2) contrast(1.5) saturate(5);
+    opacity: 100%;
+  }
+
+  .img2 {
+    filter: grayscale(100%) brightness(1.5) hue-rotate(90deg);
+    opacity: 100%;
+  }
+
+  .img3 {
+    filter: sepia(100%) invert(1.2) saturate(5);
+    opacity: 100%;
+  }
 
 .audio {
     position: fixed;
