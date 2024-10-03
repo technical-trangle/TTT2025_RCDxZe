@@ -11,18 +11,30 @@
 //   }
 // });
 
-
 const audio = document.getElementById('audioPlayer');
 const playPauseBtn = document.getElementById('playPauseBtn');
 
-// Check if the audio element is ready and ensure mobile browsers allow user interaction
-playPauseBtn.addEventListener('click', function () {
+// Function to play or pause the audio
+function playPauseAudio() {
   if (audio.paused) {
-    audio.play();
-    playPauseBtn.textContent = 'Pause';
+    audio.play()
+      .then(() => {
+        playPauseBtn.textContent = 'Pause';
+      })
+      .catch(error => {
+        console.error("Audio playback failed:", error);
+        alert("Failed to start audio. Please interact with the page.");
+      });
   } else {
     audio.pause();
     playPauseBtn.textContent = 'Play';
   }
+}
+
+// Attach both 'click' and 'touchstart' events for better mobile compatibility
+playPauseBtn.addEventListener('click', playPauseAudio);
+playPauseBtn.addEventListener('touchstart', function(e) {
+  e.preventDefault(); // Prevent default touch behavior
+  playPauseAudio();
 });
 
